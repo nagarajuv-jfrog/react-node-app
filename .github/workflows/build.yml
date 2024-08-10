@@ -57,7 +57,7 @@ jobs:
      - name: JFrog docker image scan 🐳🐸
        run: |
           jf docker scan productdemo.jfrog.io/nag-docker-local/reactappimage:${{github.run_number}}
-          jf curation audit productdemo.jfrog.io/nag-docker-local/reactappimage:${{github.run_number}}
+          jf curation-audit
      - name: Docker Push 🐳🐸
        run: |
            jf docker push productdemo.jfrog.io/nag-docker-local/reactappimage:${{github.run_number}}
